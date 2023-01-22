@@ -16,7 +16,7 @@ app.get('/:dayId', async (req, res) => {
         days.push(menu[i].slice(0, -3));
     }
 
-    return res.json({ day: days[req.params.dayId] });
+    return res.json({ day: days[req.params.dayId].slice(1) });
 });
 
 app.listen(8080, () => console.log('App is running on port 8080'));
